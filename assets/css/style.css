@@ -33,39 +33,45 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-}
-.menu-icon {
-  display: none;
-  font-size: 1.25rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-primary);
-  color: var(--color-white);
-  cursor: pointer;
-}
+/* Hamburger Toggle */
+  .menu-toggle { display: none; }
+  .menu-icon {
+    display: none;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+  }
 
-/* Desktop & tablet: gewoon horizontaal menu */
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.main-nav a {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  color: var(--color-muted);
-  text-align: center;
-  transition: background var(--transition), color var(--transition);
-}
-.main-nav a:hover,
-.main-nav a.active {
-  background: var(--color-accent);
-  color: var(--color-white);
-}
+  /* Main navigation */
+  .main-nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  .main-nav a { flex: 1; padding: 0.75rem 1rem; text-decoration: none; color: var(--color-muted); text-align: center; transition: background var(--transition), color var(--transition); }
+  .main-nav a:hover, .main-nav a.active { background: var(--color-accent); color: var(--color-white); }
+
+  /* Mobile styles */
+  @media (max-width: 700px) {
+    /* Show hamburger */
+    .menu-icon { display: block; }
+
+    /* Collapse nav in flow */
+    .main-nav {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition);
+      background: var(--color-white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Expand when toggled */
+    .menu-toggle:checked + .menu-icon + .main-nav {
+      max-height: 500px; /* adjust as needed */
+    }
+
+    .main-nav ul { display: block; }
+    .main-nav li { border-bottom: 1px solid #eee; }
+    .main-nav a { display: block; padding: 1rem; text-align: left; }
+  }
 
 /* Mobile: onder 700px breedte */
 @media (max-width: 700px) {
