@@ -1,0 +1,17 @@
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; }
+  header { background: #333; color: white; padding: 1rem; text-align: center; }
+  nav { background: #444; }
+  nav ul { margin: 0; padding: 0; display: flex; list-style: none; overflow-x: auto; }
+  nav li { flex: 1; }
+  nav a { display: block; padding: 0.75rem; color: #ddd; text-decoration: none; text-align: center; }
+  nav a.active, nav a:hover { background: #555; color: white; }
+  .container { padding: 1rem; }
+  h1 { margin-top: 0.5rem; }
+  .stats, .profile, .map { margin-bottom: 2rem; }
+  table { width: 100%; border-collapse: collapse; }
+  table th, table td { padding: 0.5rem; border: 1px solid #ccc; text-align: center; }
+  img.responsive { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  iframe { width: 100%; border: none; height: 400px; }
+  @media (max-width: 600px) { iframe { height: 300px; } }
+</style>
