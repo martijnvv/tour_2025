@@ -172,3 +172,16 @@ iframe {
     height: 300px;
   }
 }
+.overview tbody td a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background var(--transition), opacity var(--transition);
+}
+.overview tbody td a:hover,
+.overview tbody td a:focus {
+  opacity: 0.85;
+}
