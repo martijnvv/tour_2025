@@ -91,7 +91,7 @@ header {
   }
   /* Als checkbox aangevinkt: toon menu */
   .menu-toggle:checked + .menu-icon + .main-nav {
-    max-height: 300px; /* of genoeg om alle items te tonen */
+    max-height: 500px; /* of genoeg om alle items te tonen */
   }
   .main-nav ul {
     display: block;
